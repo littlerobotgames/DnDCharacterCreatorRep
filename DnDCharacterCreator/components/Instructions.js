@@ -15,10 +15,13 @@ export default Instructions;
 const styles = StyleSheet.create({
     container: {
         marginBottom: 25,
-        marginTop: 75
+        marginTop: 75,
+        borderBottomColor: Colors.textMain,
+        borderBottomWidth: 2,
     },
     text: {
         color: Colors.textMain,
-        fontSize: 30
+        fontSize: 30,
+        textAlign: 'center',
     }
 });

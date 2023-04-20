@@ -25,6 +25,9 @@ function Stat({name, startValue, pointsLeft, pointsHandler}) {
             }
         }
     }
+    function getValue() {
+        return value;
+    }
     return (
         <View style={styles.container}>
             <BasicButton onPress={buttonSubtract}> - </BasicButton>
@@ -43,11 +46,13 @@ const styles = StyleSheet.create({
     container: {
         alignItems: 'center',
         margin: 8,
-        flexDirection: 'row'
+        flexDirection: 'row',
     },
     text: {
         fontSize: 24,
         color: Colors.textMain,
-        marginHorizontal: 10
+        marginHorizontal: 10,
+        width: 150,
+        textAlign: 'center'
     }
 });
