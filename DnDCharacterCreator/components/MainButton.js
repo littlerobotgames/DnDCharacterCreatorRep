@@ -19,7 +19,6 @@ export default MainButton;
 const styles = StyleSheet.create({
     buttonContainerOuter: {
         marginHorizontal: 10,
-        overflow: 'hidden'
     },
     buttonContainerInner: {
         borderColor: Colors.textMain,
@@ -27,10 +26,11 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         height: 50,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center',
+        minWidth: 150
     },
     buttonText: {
-        fontSize: 30,
+        fontSize: 24,
         color: Colors.textMain,
     }
 })

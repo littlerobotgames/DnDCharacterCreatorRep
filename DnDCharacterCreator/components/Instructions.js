@@ -2,11 +2,16 @@ import { View, Text, StyleSheet } from "react-native";
 
 import Colors from "../constants/colors";
 
-function Instructions({children}) {
+function Instructions({children, subtext}) {
     return (
-        <View style={styles.container}>
+        <View>
+            <View style={styles.container}>
             <Text style={styles.text}>{children}</Text>
+            </View>
+        <Text style={styles.subtext}>- {subtext} -</Text>
         </View>
+        
+       
     )
 }
 
@@ -14,7 +19,7 @@ export default Instructions;
 
 const styles = StyleSheet.create({
     container: {
-        marginBottom: 25,
+        marginBottom: 5,
         marginTop: 75,
         borderBottomColor: Colors.textMain,
         borderBottomWidth: 2,
@@ -23,5 +28,11 @@ const styles = StyleSheet.create({
         color: Colors.textMain,
         fontSize: 30,
         textAlign: 'center',
+    },
+    subtext: {
+        color: Colors.textMain,
+        fontSize: 16,
+        marginBottom: 20,
+        textAlign: 'center'
     }
 });
