@@ -1,7 +1,7 @@
 import { View, StyleSheet } from "react-native";
-import Instructions from "../components/Instructions";
+import Instructions from "../../components/UI/Instructions";
 
-import Colors from "../constants/colors";
+import Colors from "../../constants/colors";
 
 function ClassScreen() {
     return (

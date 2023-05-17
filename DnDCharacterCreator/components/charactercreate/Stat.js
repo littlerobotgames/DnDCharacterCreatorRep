@@ -1,24 +1,22 @@
 import { View, StyleSheet, Text} from "react-native";
 
-import BasicButton from "./BasicButton";
-import Colors from "../constants/colors";
+import BasicButton from "../UI/BasicButton";
+import Colors from "../../constants/colors";
 
-function Stat({name, value, pointsLeft, pointsHandler, onChange}) {
+function Stat({name, value, pointsLeft, pointsHandler, changeStat}) {
     function getMod(value){
         return Math.floor((value - 10) / 2);
     }
 
     function buttonSubtract() {
         if (value > 8) {
-            onChange(value - 1);
-            pointsHandler(pointsLeft + 1)
+            changeStat(value - 1);
         }
     }
     function buttonAdd() {
-        if (pointsLeft > 0){
+        if (pointsLeft > 0) {
             if (value < 15) {
-                onChange(value + 1)
-                pointsHandler(pointsLeft - 1)
+                changeStat(value + 1);
             }
         }
     }
